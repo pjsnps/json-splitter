@@ -2,9 +2,6 @@
 Created on Dec 13, 2018
 
 @author: kumykov
-
-
-2009291403Z pjalajas@synopsys.com 
 '''
 
 import json
@@ -52,7 +49,7 @@ if version_info.major < 3:
     print ("Python 3 is required, exiting")
     exit (1)
 
-print ("Running Python {}.{}.{}".format(version_info.major, version_info.minor, version_info.micro))
+print ("Runnign Python {}.{}.{}".format(version_info.major, version_info.minor, version_info.micro))
 print ("processing %s " % argv[1])
 
 scanData  = load_json_file(argv[1])
@@ -67,10 +64,8 @@ print( scanData.keys())
 # Establishing two limiting factors, number of node list entries and size of the scan
 # Size of the scan includes file objects only, files within archive files are not counted.
 #
-#ORIGINAL: maxNodeEntries = 200000
-#ORIGINAL: maxScanSize = 4500000000
-maxNodeEntries = 10000
-maxScanSize = 45000000
+maxNodeEntries = 200000
+maxScanSize = 4500000000
 
 scanData['project'] = scanData['project'] + "-more"
 scanName = scanData['name']

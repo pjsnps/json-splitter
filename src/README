@@ -1,0 +1,10 @@
+@Author: Alex Sullivan
+
+USAGE: ./splitnsend.sh <BD_HUB_URL> <BD_API_TOKEN> <JSON_FILE>
+
+Requirements: Python3, BASH
+
+This script will authenticate via API token with your Black Duck server, it will then split the submitted dry run file into smaller json files
+It will then upload the json files into your Black Duck instance into separate code locations all mapped to the same project/version
+
+You will probably want to move your original json here, you can uncomment out the line that deletes the dry runs once this is done for a fresh start
